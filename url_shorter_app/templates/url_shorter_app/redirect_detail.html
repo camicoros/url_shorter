@@ -1,0 +1,5 @@
+<div>
+    <p>Target url: <a href="{{ object.target_url }}">{{ object.target_url }}</a></p>
+    <p>Short url: <a href="{% url 'url_shorter_app:redirect' object.short_path %}">{% url 'url_shorter_app:redirect' object.short_path %}</a></p>
+    <p>Redirects counter: {{ object.redirect_counter }}</p>
+</div>

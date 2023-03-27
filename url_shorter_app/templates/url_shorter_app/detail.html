@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{object}}</title>
+</head>
+<body>
+    <a href="{% url 'url_shorter_app:index' %}">Home</a>
+    <a href="{% url 'url_shorter_app:create' %}">Create short path</a>
+
+    <h1>{{ object }}</h1>
+    {% include 'url_shorter_app/redirect_detail.html' %}
+</body>
+</html>

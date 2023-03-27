@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of all redirects</title>
+</head>
+<body>
+    <a href="{% url 'url_shorter_app:create' %}">Create short path</a>
+    <h1>List of all redirects</h1>
+    {% for object in objects %}
+        <h2><a href="{% url 'url_shorter_app:detail' object.short_path %}">{{ object }}</a></h2>
+        {% include 'url_shorter_app/redirect_detail.html' %}
+    {% endfor %}
+</body>
+</html>

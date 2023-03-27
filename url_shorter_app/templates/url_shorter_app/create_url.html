@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Short Url</title>
+</head>
+<body>
+    <a href="{% url 'url_shorter_app:index' %}">Home</a>
+    <h1>Create Short Url</h1>
+    <form action="{% url 'url_shorter_app:create' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Generate</button>
+    </form>
+</body>
+</html>
